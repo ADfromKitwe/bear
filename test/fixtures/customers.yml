@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+efford:
+  name: efford
+  address: 12 freedom way 
+  phone: 9055431234
+
+kalusha:
+  name: kalusha 
+  address: 1 Bwalya road  
+  phone: 4165678899

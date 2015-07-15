@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3><strong>Project:</strong>
+  <%= @material.project.details.titleize %></h3>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @material.item %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @material.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @material.price %>
+</p>
+
+<%= link_to 'Edit', edit_project_material_path(@project, @material) %> |
+<%= link_to 'Back', customer_project_path(@customer, @project) %>

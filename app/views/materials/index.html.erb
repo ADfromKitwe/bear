@@ -1,0 +1,32 @@
+<h1>Materials for <%= @project.details.titleize %> Project</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project.materials.each do |material| %>
+      <tr>
+        <td><%= material.project_id %></td>
+        <td><%= material.item %></td>
+        <td><%= material.description %></td>
+        <td><%= material.price %></td>
+        <td><%= link_to 'Show', project_material_path(@project, material) %></td>
+        <td><%= link_to 'Edit', edit_project_material_path(@project, material) %></td>
+        <td><%= link_to 'Destroy', [@project,material], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Material', new_project_material_path(@project, @material) %>
+<br>
+<%= link_to 'Back to Project', project_path(@project) %>

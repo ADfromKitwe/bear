@@ -1,0 +1,9 @@
+<h1>New material for <%= @project.location.titleize %> Project</h1>
+
+<p>
+<%= @project.details.capitalize %>
+</p>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', project_path(@project) %>
